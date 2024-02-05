@@ -1,0 +1,30 @@
+body
+{
+    background-image: radial-gradient(white, rgb(143, 121, 121));
+    background-repeat: no-repeat;
+    height: min-content;
+    min-height: 100vh;
+    scrollbar-width: none;
+    padding: 10px;
+}
+
+html::-webkit-scrollbar
+{
+    display: none;
+}
+  
+html
+{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+header
+{
+    background-image: conic-gradient(black, rgb(83, 112, 139));
+}
+
+#selected
+{
+    background-color: black;
+}

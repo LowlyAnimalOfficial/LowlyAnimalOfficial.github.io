@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GlobalStyle.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+
+        .para {
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            margin-top: 10px;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #555;
+            padding: 8px;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #777;
+        }
+
+        .album {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .album img {
+            margin-left: 20%;
+            width: 60%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+    <title>Divert</title>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1 style="color: #fff;">Divert</h1>
+    </header>
+
+    <div class="back-button" onclick="window.location.href='Experience.html'">Back to Experience</div>
+
+    <div class="para">
+        <h2>About Divert</h2>
+        <p>Divert is a software I created to enhance the experience of watching films and series. 
+            As an avid collector of great content on my hard drive, I find joy in revisiting them 
+            later. The initial version of Divert was purely functional, lacking aesthetic appeal.<br>
+            <br>Enter Divert V2, an upgraded version that not only functions seamlessly but also 
+            boasts an improved visual design. The software efficiently stores data within an SQL 
+            database, allowing users to easily track their progress and customize images for each 
+            film and series. Additionally, V2 features its own unique logo, giving it a distinct 
+            identity.<br><br>While the software is still in development, its current version showcases 
+            a significant leap in both functionality and aesthetics, offering a glimpse of what's 
+            to come in its final form.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="album">
+        <img src="Images/Divert-menu.png">
+        </div>
+        <br>
+</div>
+<div class="container">
+    <div class="album">
+        <img src="Images/Divert-loadingScreen.png">
+        </div>
+        <br>
+</div>
+<div class="container">
+    <div class="album">
+        <img src="Images/Divert-films.png">
+        </div>
+        <br>
+</div>
+
+</body>
+</html>
