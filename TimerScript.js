@@ -1,63 +1,46 @@
+const targetDate = new Date(1707199810000);
 
+const millisecondsPerSecond = 1000;
+const millisecondsPerMinute = millisecondsPerSecond * 60;
+const millisecondsPerHour = millisecondsPerMinute * 60;
+const millisecondsPerDay = millisecondsPerHour * 24;
 
-const targetDate = new Date('2024-02-06:10:10');
+document.addEventListener("DOMContentLoaded", () => {
+    calculateTime();
 
-document.addEventListener("DOMContentLoaded", function()
-{
-    const currentTime = new Date();
-    const difference = targetDate - currentTime;
+    setInterval(() => {
+        calculateTime();
 
-    const days = Math.floor(-difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((-difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((-difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((-difference % (1000 * 60)) / 1000);
-
-    timerAnim(seconds / 60 * 100, "Second");
-    timerAnim(minutes / 60 * 100, "Minute");
-    timerAnim(hours / 24 * 100, "Hour");
-    timerAnim(days / 365 * 100, "Day");
-
-    document.getElementById("days").innerText = CheckFormat(days);
-    document.getElementById("hours").innerText = CheckFormat(hours);
-    document.getElementById("minutes").innerText = CheckFormat(minutes);
-    document.getElementById("seconds").innerText = CheckFormat(seconds);
+    }, 1000);
 });
 
-setInterval(() =>
-{
+function calculateTime() {
     const currentTime = new Date();
     const difference = targetDate - currentTime;
 
-    const days = Math.floor(-difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((-difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((-difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((-difference % (1000 * 60)) / 1000);
+    const days = Math.floor(-difference / millisecondsPerDay);
+    const hours = Math.floor((-difference % millisecondsPerDay) / millisecondsPerHour);
+    const minutes = Math.floor((-difference % millisecondsPerHour) / millisecondsPerMinute);
+    const seconds = Math.floor((-difference % millisecondsPerMinute) / millisecondsPerSecond);
 
-    timerAnim(seconds / 60 * 100, "Second");
-    timerAnim(minutes / 60 * 100, "Minute");
-    timerAnim(hours / 24 * 100, "Hour");
-    timerAnim(days / 365 * 100, "Day");
+    timerAnim(seconds / 60, "Second");
+    timerAnim(minutes / 60, "Minute");
+    timerAnim(hours / 24, "Hour");
+    timerAnim(days / 365, "Day");
 
     document.getElementById("days").innerText = CheckFormat(days);
     document.getElementById("hours").innerText = CheckFormat(hours);
     document.getElementById("minutes").innerText = CheckFormat(minutes);
     document.getElementById("seconds").innerText = CheckFormat(seconds);
-
-}, 1000);
-
-function CheckFormat(time)
-{
-    if (time.toString().length == 1)
-    {
-        return "0" + time.toString();
-    }
-    else
-    {
-        return time.toString();
-    }
 }
 
-function timerAnim(percentage, type)
-{
-    document.getElementById(`border${type}s`).style.backgroundImage = `conic-gradient(white ${percentage}%, rgba(232, 242, 249, 1) 0%)`;
+function CheckFormat(time) {
+    if (time.toString().length == 1) {
+        return "0" + time.toString();
+    }
+    return time.toString();
+}
+
+function timerAnim(ratio, type) {
+    document.getElementById(`border${type}s`).style.backgroundImage = `conic-gradient(white ${ratio * 100}%, rgba(232, 242, 249, 1) 0%)`;
 }
