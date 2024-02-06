@@ -1,0 +1,112 @@
+body
+{
+    background-image: radial-gradient(white, rgb(143, 121, 121));
+    background-repeat: no-repeat;
+    height: min-content;
+    min-height: 100vh;
+    scrollbar-width: none;
+    padding: 10px;
+    margin:  0;
+}
+
+#counter
+{
+    margin-top: -20px;
+}
+
+#borderDays
+{
+        margin-top: 30px;
+    border: 2px;
+    border-color: orange;
+    border-style:groove;
+    text-align: center;
+    padding: 30px;
+    height: 85px;
+}
+
+#borderHours
+{
+    margin-top: 30px;
+    border: 2px;
+    border-color: orange;
+    border-style:groove;
+    text-align: center;
+    padding: 30px;
+    height: 85px;
+}
+
+#borderMinutes
+{
+    margin-top: 30px;
+    border: 2px;
+    border-color: orange;
+    border-style:groove;
+    text-align: center;
+    padding: 30px;
+    height: 85px;
+}
+
+#borderSeconds
+{
+    margin-top: 30px;
+    border: 2px;
+    border-color: orange;
+    border-style:groove;
+    text-align: center;
+    padding: 30px;
+    height: 85px;
+}
+
+@media (max-width: 555px)
+{
+    .Timer
+    {
+        flex-wrap: wrap;
+        gap: 10px;
+    }    
+}
+
+section
+{
+    background-color: white;
+    max-width: 590px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+#timerTitle
+{
+    text-align: center;
+}
+
+.Timer
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+}
+
+h2
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
