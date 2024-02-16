@@ -1,6 +1,15 @@
 
+let generating = false;
+
 function CallAPI()
 {
+    if (generating)
+    {
+        return;
+    }
+
+    generating = true;
+
     WaitUp(false);
 
  // Make a GET request to the API endpoint
@@ -30,6 +39,8 @@ function WaitUp(end)
 {
     if (end)
     {
+        generating = false;
+
         document.getElementById('response').style.fontStyle = "normal";
         document.getElementById('response').style.fontSize = "1.5em";
         document.getElementById('response').style.color = "Black";

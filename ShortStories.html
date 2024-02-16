@@ -14,14 +14,37 @@
 
 .container
 {
-            max-width: 800px;
-            height: 150px;
-            margin: 20px auto;
-            padding: 50px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    height: 150px;
+    margin: 20px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+#buttonPos
+{
+    margin-top: 50px;
+}
+
+.Gene-button
+        {
+            width: 150px;
+            margin-top: -30px;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: black;
+            padding: 8px;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        
+        .Gene-button:hover {
+            background-color: #2d2d2d;
+        }
 
 #response
 {
@@ -53,18 +76,20 @@
     <section>
 
 
-        <div class="container">
+    <div class="container">
 
-            <div class="back-button" onclick="window.location.href='index.html'">Back</div>
+        <div class="back-button" onclick="window.location.href='index.html'">Back</div>
 
-            <div id="API">
-            <h1 id="response">__________</h1>
+        <div id="API">
+        <h1 id="response">__________</h1>
 
-            <button id="generateButton" onclick="CallAPI()">Generate story</button>
-            </div>
-
-
+        <div id="buttonPos">
+            <div class="Gene-button" id="generateButton" onclick="CallAPI()">Generate Story</div>
+            
         </div>
+    </div>
+
+    </div>
 
     </section>
 
