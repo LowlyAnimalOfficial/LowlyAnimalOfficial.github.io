@@ -13,7 +13,7 @@ function callAPI()
  .then(data => {
      // Display the response data
      const story = data[0].story; // Assuming the response is an array with one object
-     document.getElementById('response').textContent = story.replace('"', "");
+     document.getElementById('response').textContent = story;
  })
  .catch(error => {
      // Handle any errors that occur during the request
