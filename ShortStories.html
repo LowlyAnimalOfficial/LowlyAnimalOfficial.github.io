@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="GlobalStyle.css">
+</head>
+
+<body>
+
+    <style>
+
+.container
+{
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#API
+{
+    text-align: center;
+}
+
+        .back-button {
+            margin-top: -30px;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #555;
+            padding: 8px;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #777;
+        }
+    </style>
+
+    <section>
+
+
+        <div class="container">
+
+            <div class="back-button" onclick="window.location.href='index.html'">Back</div>
+
+            <div id="API">
+            <h1 id="response">__________</h1>
+
+            <button onclick="callAPI()">Generate story</button>
+            </div>
+
+
+        </div>
+
+    </section>
+
+</body>
+<script src="apiScript.js"></script>
+
+</html>
