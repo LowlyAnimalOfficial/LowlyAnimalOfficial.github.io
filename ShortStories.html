@@ -75,6 +75,21 @@
         .back-button:hover {
             background-color: #777;
         }
+
+.subjectTab
+{
+    margin-left: 85%;
+    margin-top: -5%;
+
+    display: flex;
+}
+
+.subjectTab select
+{
+    height: 10%;
+    margin-top: 14%;
+    margin-left: 5%;
+}
     </style>
 
     <section>
@@ -83,6 +98,20 @@
     <div class="container">
 
         <div class="back-button" onclick="window.location.href='index.html'">Back</div>
+
+        <div class="subjectTab">
+        <p>Subject:</p>
+        <select id="subjectSelector">
+            <option  value="Anything" selected>Anything</option>
+            <option  value="Calculator">Calculator</option>
+            <option  value="Giraffe">Giraffe</option>
+            <option  value="Monkey">Monkey</option>
+            <option  value="Kevin">Kevin</option>
+            <option  value="Shape">Shape</option>
+            <option  value="Music">Music</option>
+            <option  value="A finger">A finger</option>
+        </select>
+        </div>
 
         <div id="API">
         <h1 id="response">__________</h1>

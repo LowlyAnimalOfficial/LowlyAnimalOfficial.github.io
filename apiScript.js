@@ -12,8 +12,10 @@ function CallAPI()
 
     WaitUp(false);
 
+    const subject = document.getElementById('subjectSelector').value;
+
  // Make a GET request to the API endpoint
- fetch('https://StupidS.azurewebsites.net/ShortStory')
+ fetch(`https://StupidS.azurewebsites.net/ShortStory?subject=${subject}`)
  .then(response => {
      // Check if the response is successful (status code 200)
      if (!response.ok) {
