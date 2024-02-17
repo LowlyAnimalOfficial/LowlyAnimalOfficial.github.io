@@ -19,6 +19,7 @@ function CallAPI()
  .then(response => {
      // Check if the response is successful (status code 200)
      if (!response.ok) {
+        document.getElementById('response').textContent = "Error: Please report this to the creator of the API or try again later.";
          throw new Error('Network response was not ok');
      }
      // Parse the JSON response
@@ -34,7 +35,8 @@ function CallAPI()
  .catch(error => {
      // Handle any errors that occur during the request
      console.error('There was a problem with the request:', error);
- });
+     document.getElementById('response').textContent = "Error: Please report this to the creator of the API or try again later.";
+    });
 }
 
 function WaitUp(end)
