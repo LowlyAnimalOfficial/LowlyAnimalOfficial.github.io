@@ -1,4 +1,4 @@
-const targetDate = new Date(1707207010000);
+const targetDate = new Date(1707264000000);
 
 const millisecondsPerSecond = 1000;
 const millisecondsPerMinute = millisecondsPerSecond * 60;

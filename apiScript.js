@@ -24,7 +24,7 @@ function CallAPI()
      }
      // Parse the JSON response
      return response.json();
- })
+ }) 
  .then(data => {
          WaitUp(true);
      // Display the response data
